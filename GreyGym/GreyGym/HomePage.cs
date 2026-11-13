@@ -50,6 +50,5 @@ namespace GreyGym
             pg.Show();
             this.Hide();
         }
-
     }
 }

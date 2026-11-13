@@ -1,5 +1,6 @@
 ﻿using GreyGym;
 using Microsoft.SqlServer.Server;
+using MviewWorkout;
 using project;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
@@ -27,7 +27,7 @@ namespace GreyGym
         private void ManagerialView_User__Load(object sender, EventArgs e)
         {
             this.LoadData();
-
+            
         }
 
         private void LoadData()
@@ -84,14 +84,14 @@ namespace GreyGym
             cmbGoal.Text = "";
             rtxtFoodPlan.Text = "";
             dtpStart.Text = "";
-
+      
             dataGridView1.ClearSelection();
         }
 
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if(e.RowIndex >= 0)
             {
                 txtId.Text = dataGridView1.Rows[e.RowIndex].Cells["ID"].Value.ToString();
                 txtName.Text = dataGridView1.Rows[e.RowIndex].Cells["CustomerName"].Value.ToString();
@@ -151,8 +151,8 @@ namespace GreyGym
                                         "insert into DietPlan " +
                                         "(UserID, TrainerID, CurrentWeight, TargetWeight, Goal, FoodPlan, StartDate) " +
                                         "values (" +
-                                        $"{userId}, " +
-                                        $"{trainerId}, " +
+                                        $"{userId}, " +          
+                                        $"{trainerId}, " +       
                                         $"{currWt}, " +
                                         $"{tarWt}, " +
                                         $"'{goal}', " +
@@ -231,5 +231,72 @@ namespace GreyGym
             }
         }
 
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerialView_User_ mgu = new ManagerialView_User_();
+            mgu.Show();
+        }
+
+        private void btnPaymet_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManegerialView_Amount_ mga = new ManegerialView_Amount_();
+            mga.Show();
+        }
+
+        private void btnPackage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerialView_Packages_ mgp = new ManagerialView_Packages_();
+            mgp.Show();
+        }
+
+        private void btnDiet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUserpackage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerialView_UserPackage_ mgus = new ManagerialView_UserPackage_();
+            mgus.Show();
+        }
+
+        private void btnGym_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MviewEquipment eview = new MviewEquipment();
+            eview.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerialView_TrainerUser_ mgt = new ManagerialView_TrainerUser_();
+            mgt.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerialViewWorkout workout = new ManagerialViewWorkout();
+            workout.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerialView_Incident_ mgi = new ManagerialView_Incident_();
+            mgi.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login lg = new Login();
+            lg.Show();
+        }
     }
 }

@@ -170,7 +170,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(176, 23);
             this.txtName.TabIndex = 6;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtId
             // 
@@ -555,7 +554,7 @@
             this.MinimizeBox = false;
             this.Name = "ManagerialView_Incident_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ManagerialView_User_";
+            this.Text = "ManagerialView_Incident_";
             this.Load += new System.EventHandler(this.ManagerialView_Incident__Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

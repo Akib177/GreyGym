@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C6763EE-5123-40AD-B4F5-DEA0D246DAB3}</ProjectGuid>
+    <ProjectGuid>{BDE9B5D9-1FC4-44CA-8BC6-5A1B26FBB113}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>GreyGym</RootNamespace>
     <AssemblyName>GreyGym</AssemblyName>
@@ -47,29 +47,101 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationHelper.cs" />
-    <Compile Include="Registration.cs">
+    <Compile Include="EmployeeView%28User%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registration.Designer.cs">
-      <DependentUpon>Registration.cs</DependentUpon>
+    <Compile Include="EmployeeView%28User%29.Designer.cs">
+      <DependentUpon>EmployeeView%28User%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="EmployeeView%28TrainerUser%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="EmployeeView%28TrainerUser%29.Designer.cs">
+      <DependentUpon>EmployeeView%28TrainerUser%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.cs">
+    <Compile Include="EmployeeView%28Incident%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomePage.Designer.cs">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <Compile Include="EmployeeView%28Incident%29.Designer.cs">
+      <DependentUpon>EmployeeView%28Incident%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManegerialView%28Amount%29.cs">
+    <Compile Include="EmployeeView%28Packages%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManegerialView%28Amount%29.Designer.cs">
-      <DependentUpon>ManegerialView%28Amount%29.cs</DependentUpon>
+    <Compile Include="EmployeeView%28Packages%29.Designer.cs">
+      <DependentUpon>EmployeeView%28Packages%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeView%28UserPackage%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView%28UserPackage%29.Designer.cs">
+      <DependentUpon>EmployeeView%28UserPackage%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeView%28Amount%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView%28Amount%29.Designer.cs">
+      <DependentUpon>EmployeeView%28Amount%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeViewWorkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeViewWorkout.Designer.cs">
+      <DependentUpon>EmployeeViewWorkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerViewWorkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerViewWorkout.Designer.cs">
+      <DependentUpon>TrainerViewWorkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerialViewWorkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerialViewWorkout.Designer.cs">
+      <DependentUpon>ManagerialViewWorkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EviewEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EviewEquipment.Designer.cs">
+      <DependentUpon>EviewEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TviewEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TviewEquipment.Designer.cs">
+      <DependentUpon>TviewEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MviewEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MviewEquipment.Designer.cs">
+      <DependentUpon>MviewEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileUpdate.Designer.cs">
+      <DependentUpon>ProfileUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileUpdate2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileUpdate2.Designer.cs">
+      <DependentUpon>ProfileUpdate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerView%28DietPlan%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerView%28DietPlan%29.Designer.cs">
+      <DependentUpon>TrainerView%28DietPlan%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerView%28TrainerUser%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerView%28TrainerUser%29.Designer.cs">
+      <DependentUpon>TrainerView%28TrainerUser%29.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerialView%28UserPackage%29.cs">
       <SubType>Form</SubType>
@@ -77,11 +149,17 @@
     <Compile Include="ManagerialView%28UserPackage%29.Designer.cs">
       <DependentUpon>ManagerialView%28UserPackage%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagerialView%28User%29.cs">
+    <Compile Include="UserWorkout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerialView%28User%29.Designer.cs">
-      <DependentUpon>ManagerialView%28User%29.cs</DependentUpon>
+    <Compile Include="UserWorkout.Designer.cs">
+      <DependentUpon>UserWorkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerHome.Designer.cs">
+      <DependentUpon>CustomerHome.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerialView%28TrainerUser%29 .cs">
       <SubType>Form</SubType>
@@ -89,11 +167,11 @@
     <Compile Include="ManagerialView%28TrainerUser%29 .Designer.cs">
       <DependentUpon>ManagerialView%28TrainerUser%29 .cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagerialView%28Incident%29.cs">
+    <Compile Include="ManagerialView%28DietPlan%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerialView%28Incident%29.Designer.cs">
-      <DependentUpon>ManagerialView%28Incident%29.cs</DependentUpon>
+    <Compile Include="ManagerialView%28DietPlan%29.Designer.cs">
+      <DependentUpon>ManagerialView%28DietPlan%29.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerialView%28Packages%29.cs">
       <SubType>Form</SubType>
@@ -101,11 +179,35 @@
     <Compile Include="ManagerialView%28Packages%29.Designer.cs">
       <DependentUpon>ManagerialView%28Packages%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagerialView%28DietPlan%29.cs">
+    <Compile Include="ManagerialView%28Incident%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerialView%28DietPlan%29.Designer.cs">
-      <DependentUpon>ManagerialView%28DietPlan%29.cs</DependentUpon>
+    <Compile Include="ManagerialView%28Incident%29.Designer.cs">
+      <DependentUpon>ManagerialView%28Incident%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerialView%28User%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerialView%28User%29.Designer.cs">
+      <DependentUpon>ManagerialView%28User%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManegerialView%28Amount%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManegerialView%28Amount%29.Designer.cs">
+      <DependentUpon>ManegerialView%28Amount%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageDash.Designer.cs">
+      <DependentUpon>PackageDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
     </Compile>
     <Compile Include="Packages.cs">
       <SubType>Form</SubType>
@@ -113,29 +215,116 @@
     <Compile Include="Packages.Designer.cs">
       <DependentUpon>Packages.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateInfo.cs">
+    <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateInfo.Designer.cs">
-      <DependentUpon>UpdateInfo.cs</DependentUpon>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Session.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session.cs" />
+    <EmbeddedResource Include="EmployeeView%28User%29.resx">
+      <DependentUpon>EmployeeView%28User%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView%28TrainerUser%29.resx">
+      <DependentUpon>EmployeeView%28TrainerUser%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView%28Incident%29.resx">
+      <DependentUpon>EmployeeView%28Incident%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView%28Packages%29.resx">
+      <DependentUpon>EmployeeView%28Packages%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView%28UserPackage%29.resx">
+      <DependentUpon>EmployeeView%28UserPackage%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView%28Amount%29.resx">
+      <DependentUpon>EmployeeView%28Amount%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeViewWorkout.resx">
+      <DependentUpon>EmployeeViewWorkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainerViewWorkout.resx">
+      <DependentUpon>TrainerViewWorkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerialViewWorkout.resx">
+      <DependentUpon>ManagerialViewWorkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EviewEquipment.resx">
+      <DependentUpon>EviewEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TviewEquipment.resx">
+      <DependentUpon>TviewEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MviewEquipment.resx">
+      <DependentUpon>MviewEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileUpdate.resx">
+      <DependentUpon>ProfileUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileUpdate2.resx">
+      <DependentUpon>ProfileUpdate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainerView%28DietPlan%29.resx">
+      <DependentUpon>TrainerView%28DietPlan%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainerView%28TrainerUser%29.resx">
+      <DependentUpon>TrainerView%28TrainerUser%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerialView%28UserPackage%29.resx">
+      <DependentUpon>ManagerialView%28UserPackage%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserWorkout.resx">
+      <DependentUpon>UserWorkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerHome.resx">
+      <DependentUpon>CustomerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerialView%28TrainerUser%29 .resx">
+      <DependentUpon>ManagerialView%28TrainerUser%29 .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerialView%28DietPlan%29.resx">
+      <DependentUpon>ManagerialView%28DietPlan%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerialView%28Packages%29.resx">
+      <DependentUpon>ManagerialView%28Packages%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerialView%28Incident%29.resx">
+      <DependentUpon>ManagerialView%28Incident%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerialView%28User%29.resx">
+      <DependentUpon>ManagerialView%28User%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManegerialView%28Amount%29.resx">
+      <DependentUpon>ManegerialView%28Amount%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageDash.resx">
+      <DependentUpon>PackageDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packages.resx">
+      <DependentUpon>Packages.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManagerialView%28DietPlan%29.resx">
-      <DependentUpon>ManagerialView%28DietPlan%29.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManagerialView%28Incident%29.resx">
-      <DependentUpon>ManagerialView%28Incident%29.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Packages.resx">
-      <DependentUpon>Packages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,14 +334,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateInfo.resx">
-      <DependentUpon>UpdateInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include=".editorconfig" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -165,6 +351,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-Photoroom %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health-club-without-people-with-exercise-equipment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-willpicturethis-1954524.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-pixabay-416717.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-goumbik-669577.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-victorfreitas-2261482.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-profile-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-profile-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-profile-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-payment-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-membership-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-workout-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-35.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

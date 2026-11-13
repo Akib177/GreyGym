@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using GreyGym;
+using MviewWorkout;
 
 namespace GreyGym
 {
@@ -49,15 +50,15 @@ namespace GreyGym
                 cmbUser.DataSource = dt1;
                 cmbUser.ValueMember = "ID";
                 cmbUser.DisplayMember = "Name";
-
+                
 
                 DataTable dt2 = ds.Tables[2];
                 cmbPackage.DataSource = dt2;
                 cmbPackage.ValueMember = "ID";
                 cmbPackage.DisplayMember = "PackageName";
                 con.Close();
-
-
+                
+                
 
 
             }
@@ -83,8 +84,8 @@ namespace GreyGym
                 txtAmount.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 cmbMethod.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cmbPaymetStatus.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-
-
+                
+              
             }
         }
 
@@ -120,7 +121,7 @@ namespace GreyGym
             dataGridView1.ClearSelection();
         }
 
-
+      
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -213,7 +214,7 @@ namespace GreyGym
                         cmdDiet.CommandText =
                             $"insert into DietPlan (UserID,StartDate) " +
                             $"values ({userId}, '{startDate}')" +
-                            $"select ID from DietPlan where UserID = '{userId}'";
+                            $"select ID from DietPlan where UserID = '{userId}'"; 
 
 
                         DataSet dsDiet = new DataSet();
@@ -310,7 +311,9 @@ namespace GreyGym
 
         private void btnGym_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            MviewEquipment mge = new MviewEquipment();
+            mge.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -322,7 +325,9 @@ namespace GreyGym
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ManagerialViewWorkout workout = new ManagerialViewWorkout();
+            workout.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)

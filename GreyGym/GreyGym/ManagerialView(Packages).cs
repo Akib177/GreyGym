@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MviewWorkout;
 using project;
 
 namespace GreyGym
@@ -41,7 +42,7 @@ namespace GreyGym
 
 
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
 
             }
@@ -56,7 +57,7 @@ namespace GreyGym
         {
             if (e.RowIndex >= 0)
             {
-                txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtId.Text= dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtPackage.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 ttxDuration.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtPrice.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -95,7 +96,7 @@ namespace GreyGym
         private void AddData()
         {
             string pack = txtPackage.Text;
-            int duration = Convert.ToInt32(ttxDuration.Text);
+            int duration = Convert.ToInt32( ttxDuration.Text);
             int price = Convert.ToInt32(txtPrice.Text);
             string desc = rDesc.Text;
 
@@ -113,7 +114,7 @@ namespace GreyGym
                 MessageBox.Show("Package Added Successfully");
 
                 this.LoadData();
-
+               
 
 
 
@@ -128,8 +129,8 @@ namespace GreyGym
         {
             int id = Convert.ToInt32(txtId.Text);
             string Pack = txtPackage.Text;
-            int duration = Convert.ToInt32(ttxDuration.Text);
-            int price = Convert.ToInt32(txtPrice.Text);
+            int duration = Convert.ToInt32( ttxDuration.Text);
+            int price = Convert.ToInt32 (txtPrice.Text);
             string desc = rDesc.Text;
             try
             {
@@ -141,7 +142,7 @@ namespace GreyGym
                 cmd.Connection = con;
 
                 cmd.CommandText = $"Update  Package set PackageName = '{Pack}',Duration = {duration} , Price = {price} , Description = '{desc}' where id = {id}";
-
+                
                 MessageBox.Show("Updated Successfully");
                 cmd.ExecuteNonQuery();
                 this.LoadData();
@@ -203,7 +204,9 @@ namespace GreyGym
 
         private void btnGym_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            MviewEquipment eview = new MviewEquipment();
+            eview.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -215,7 +218,9 @@ namespace GreyGym
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ManagerialViewWorkout employee = new ManagerialViewWorkout();
+            employee.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -223,6 +228,59 @@ namespace GreyGym
             this.Hide();
             ManagerialView_Incident_ mgi = new ManagerialView_Incident_();
             mgi.Show();
+        }
+
+        private void Delete()
+        {
+            int id = Convert.ToInt32(txtId.Text);
+            string Pack = txtPackage.Text;
+            int duration = Convert.ToInt32(ttxDuration.Text);
+            int price = Convert.ToInt32(txtPrice.Text);
+            string desc = rDesc.Text;
+            try
+            {
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = ApplicationHelper.cs;
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                cmd.CommandText = $"delete from Package where id  = {id}";
+                var result = MessageBox.Show("Are you sure to delete this package? ", "Confirmation", MessageBoxButtons.YesNo);
+             
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("Deleted Successfully");
+                    cmd.ExecuteNonQuery();
+                    this.LoadData();
+                    con.Close();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string id = txtId.Text;
+            if(id == "Auto Generated")
+            {
+                MessageBox.Show("Please select a row first");
+                return;
+            }
+            else
+            {
+                this.Delete();
+            }
+
+           
         }
     }
 }

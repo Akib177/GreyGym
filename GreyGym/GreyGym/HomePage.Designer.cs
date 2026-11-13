@@ -101,22 +101,22 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("JetBrains Mono NL Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(543, 18);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(342, 16);
+            this.label12.Size = new System.Drawing.Size(458, 17);
             this.label12.TabIndex = 1;
             this.label12.Text = "Built for strength. Designed for control. GreyGym.";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("JetBrains Mono NL Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(3, 18);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 16);
+            this.label11.Size = new System.Drawing.Size(233, 17);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Made by :\r\n";
+            this.label11.Text = "Made by : Tanzim,Sady,Omi";
             // 
             // label10
             // 
@@ -159,8 +159,9 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(425, 717);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 21);
+            this.label8.Size = new System.Drawing.Size(552, 105);
             this.label8.TabIndex = 12;
+            this.label8.Text = resources.GetString("label8.Text");
             // 
             // label7
             // 
@@ -175,32 +176,35 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(-1, -13);
+            this.pictureBox5.BackgroundImage = global::GreyGym.Properties.Resources.pexels_goumbik_669577;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(30, 638);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(193, 144);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 18;
+            this.pictureBox5.Padding = new System.Windows.Forms.Padding(8);
+            this.pictureBox5.Size = new System.Drawing.Size(377, 232);
+            this.pictureBox5.TabIndex = 10;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(30, 614);
+            this.pictureBox4.BackgroundImage = global::GreyGym.Properties.Resources.pexels_victorfreitas_2261482;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(600, 894);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(367, 245);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 19;
+            this.pictureBox4.Padding = new System.Windows.Forms.Padding(8);
+            this.pictureBox4.Size = new System.Drawing.Size(387, 212);
+            this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(62, 160);
+            this.pictureBox3.BackgroundImage = global::GreyGym.Properties.Resources.pexels_pixabay_416717;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(600, 378);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(335, 227);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.Padding = new System.Windows.Forms.Padding(8);
+            this.pictureBox3.Size = new System.Drawing.Size(370, 183);
+            this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
             // label6
@@ -238,12 +242,13 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(607, 403);
+            this.pictureBox2.BackgroundImage = global::GreyGym.Properties.Resources.pexels_willpicturethis_1954524;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(30, 163);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(365, 262);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.Padding = new System.Windows.Forms.Padding(8);
+            this.pictureBox2.Size = new System.Drawing.Size(393, 255);
+            this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
             // label3
@@ -270,12 +275,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(607, 836);
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.pictureBox1.BackgroundImage = global::GreyGym.Properties.Resources.image_removebg_preview;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(396, 270);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.Size = new System.Drawing.Size(173, 129);
+            this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // panel2
@@ -292,11 +298,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("JetBrainsMono NF", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(3, -2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 31);
+            this.label1.Size = new System.Drawing.Size(127, 36);
             this.label1.TabIndex = 2;
             this.label1.Text = "GreyGym";
             // 
@@ -339,10 +345,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::GreyGym.Properties.Resources.health_club_without_people_with_exercise_equipment;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1107, 644);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

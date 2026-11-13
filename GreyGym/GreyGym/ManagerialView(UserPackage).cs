@@ -1,5 +1,6 @@
 ﻿using GreyGym;
 using Microsoft.SqlServer.Server;
+using MviewWorkout;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,7 +65,7 @@ namespace GreyGym
 
         }
 
-
+        
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -164,7 +165,9 @@ namespace GreyGym
 
         private void btnGym_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            MviewEquipment mg = new MviewEquipment();
+            mg.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -176,7 +179,9 @@ namespace GreyGym
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ManagerialViewWorkout mgw = new ManagerialViewWorkout();
+            mgw.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)

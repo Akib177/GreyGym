@@ -48,7 +48,7 @@ namespace GreyGym
 
         private void txtPass_Leave_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtPass.Text))
+            if(string.IsNullOrWhiteSpace(txtPass.Text))
             {
                 txtPass.Text = "Enter Password";
                 txtPass.ForeColor = Color.Gray;
@@ -110,6 +110,8 @@ namespace GreyGym
         {
             string Gmail = txtEmail.Text;
             string Password = txtPass.Text;
+            
+            
 
             try
             {
@@ -126,6 +128,8 @@ namespace GreyGym
                 adp.Fill(ds);
 
                 DataTable dt = ds.Tables[0];
+               
+                
                 connection.Close();
 
                 if (dt.Rows.Count != 1)
@@ -133,39 +137,47 @@ namespace GreyGym
                     MessageBox.Show("Invalid Email or Password");
                     return;
                 }
+  
+                    int userId = Convert.ToInt32(dt.Rows[0]["ID"]);
+                    Session.ID = userId;
+                    Session.Name = dt.Rows[0]["Name"].ToString();
+                    string type = dt.Rows[0]["Usertype"].ToString();
+                    Session.GMAIL = Gmail;
+                    Session.PASSWORD = Password;
+                    string Phone = dt.Rows[0]["Phone"].ToString();
+                    Session.PHONE = Phone;
+                    string Gender = dt.Rows[0]["Gender"].ToString();
+                Session.GENDER = Gender;
+                    
+                
 
-                int userId = Convert.ToInt32(dt.Rows[0]["ID"]);
-                Session.ID = userId;
-                Session.Name = dt.Rows[0]["Name"].ToString();
-                string type = dt.Rows[0]["Usertype"].ToString();
-
-                if (type == "Customer")
+                if(type == "Customer")
                 {
                     CustomerHome ch = new CustomerHome();
                     this.Hide();
                     ch.Show();
                 }
 
-                else if (type == "Admin")
+                else if(type == "Admin")
                 {
                     ManagerialView_User_ mgu = new ManagerialView_User_();
                     this.Hide();
                     mgu.Show();
                 }
-                else if (type == "Trainer")
+                else if(type == "Trainer")
                 {
                     TrainerView_TrainerUser_ tgu = new TrainerView_TrainerUser_();
                     this.Hide();
                     tgu.Show();
                 }
-                else if (type == "Employee")
+                else if(type == "Employee")
                 {
                     EmployeeView_User_ egu = new EmployeeView_User_();
                     this.Hide();
                     egu.Show();
                 }
-
-
+                
+                    
             }
             catch (Exception ex)
             {
@@ -173,12 +185,7 @@ namespace GreyGym
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }

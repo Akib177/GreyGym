@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GreyGym;
 using Microsoft.SqlServer.Server;
+using MviewWorkout;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace GreyGym
@@ -68,7 +69,7 @@ namespace GreyGym
 
         }
 
-
+        
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -98,12 +99,12 @@ namespace GreyGym
         private void btnSave_Click(object sender, EventArgs e)
         {
             string id = txtId.Text;
-            string name = txtName.Text;
+            string name  = txtName.Text;
             DateTime dtp1 = dtpReport.Value;
             string report = rtxtIncident.Text;
             string status = cmbStatus.Text;
 
-            if (id == "Auto Generated")
+            if(id=="Auto Generated")
             {
                 try
                 {
@@ -120,7 +121,7 @@ namespace GreyGym
                     this.LoadData();
                     con.Close();
                 }
-                catch (Exception ex)
+                catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -146,7 +147,7 @@ namespace GreyGym
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message); 
                 }
             }
         }
@@ -159,14 +160,14 @@ namespace GreyGym
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string id = txtId.Text;
-            if (id == "Auto Generated")
+            if(id=="Auto Generated")
             {
                 MessageBox.Show("Please select a row first");
                 return;
             }
 
-            var result = MessageBox.Show("Are You Sure?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.No)
+            var result = MessageBox.Show("Are You Sure?", "Confirm", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            if(result == DialogResult.No)
             {
                 return;
             }
@@ -240,6 +241,8 @@ namespace GreyGym
         private void btnGym_Click(object sender, EventArgs e)
         {
             this.Hide();
+            MviewEquipment eview = new MviewEquipment();
+            eview.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -251,7 +254,9 @@ namespace GreyGym
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ManagerialViewWorkout employee = new ManagerialViewWorkout();
+            employee.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -264,11 +269,6 @@ namespace GreyGym
             this.Hide();
             Login lg = new Login();
             lg.Show();
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

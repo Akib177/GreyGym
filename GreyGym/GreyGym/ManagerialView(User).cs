@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GreyGym;
 using Microsoft.SqlServer.Server;
+using MviewWorkout;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace GreyGym
@@ -24,8 +25,8 @@ namespace GreyGym
         private void ManagerialView_User__Load(object sender, EventArgs e)
         {
             this.LoadData();
-
-
+            
+          
         }
 
         private void LoadData()
@@ -66,7 +67,7 @@ namespace GreyGym
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -83,13 +84,13 @@ namespace GreyGym
             txtPass.Text = "";
             cmbGender.Text = "";
             cmbUserType.Text = "";
-
+      
             dataGridView1.ClearSelection();
         }
 
         private void txtId_TextChanged(object sender, EventArgs e)
         {
-
+            
 
         }
 
@@ -121,15 +122,15 @@ namespace GreyGym
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string id = txtId.Text;
-            if (id == "Auto Generated")
+            string id  = txtId.Text;
+            if(id=="Auto Generated")
             {
                 MessageBox.Show("Please Select a row first.");
                 return;
             }
 
-            var result = MessageBox.Show("Are You Sure?", "Confirm", MessageBoxButtons.YesNo);
-            if (result == DialogResult.No)
+          var result =  MessageBox.Show("Are You Sure?", "Confirm", MessageBoxButtons.YesNo);
+            if(result == DialogResult.No)
             {
                 return;
             }
@@ -168,12 +169,12 @@ namespace GreyGym
             string id = txtId.Text;
             string name = txtName.Text;
             string gmail = txtGmail.Text;
-            int phone = Convert.ToInt32(txtPhone.Text);
+            int phone = Convert.ToInt32( txtPhone.Text);
             string pass = txtPass.Text;
             string gender = cmbGender.Text;
             string UserType = cmbUserType.Text;
 
-            if (id == "Auto Generated")
+            if(id=="Auto Generated")
             {
                 try
                 {
@@ -217,7 +218,7 @@ namespace GreyGym
                     this.RefreshAll();
 
 
-
+                  
 
 
 
@@ -228,7 +229,7 @@ namespace GreyGym
                 }
 
             }
-
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -273,7 +274,9 @@ namespace GreyGym
 
         private void btnGym_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            MviewEquipment eview = new MviewEquipment();
+            eview.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -285,7 +288,9 @@ namespace GreyGym
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ManagerialViewWorkout employee = new ManagerialViewWorkout();
+            employee.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
