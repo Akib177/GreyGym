@@ -96,12 +96,11 @@ All table schemas and sample data scripts are included in the repository.
 
 ## 👨‍💻 Maintainer
 
-**Md. Tanzimul Islam**  
-GitHub: [Tanzim3010](https://github.com/Tanzim3010)  
-Facebook: *https://www.facebook.com/tanzim3010/*
+**Adnan Akib**  
+GitHub: https://github.com/Akib177
 
 📥 **Project Download**  
-Clone the repository or download the ZIP from GitHub.
+Clone the repository
 
 ---
 
